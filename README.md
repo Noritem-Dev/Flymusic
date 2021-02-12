@@ -1,27 +1,86 @@
----
-description: Your bot of the future
----
+# Music-bot
+A complete code to download for a music bot. Using a module (discord-player) 🎧
 
-# Home
+Looking for a code for a music bot ? This fully open source code is made for your project !
 
-## Hello and welcome to the Fly Music site!
+If you need help with this project, to get support faster you can join the help server by just clicking [here](http://dc.pingugames.de/).
 
-### Here you can find all the info about the best Discord Music Bot of the future. <a id="here-you-can-find-all-the-info-about-the-best-discord-bot-of-the-future"></a>
+### ⚡ Installation
 
-{% tabs %}
-{% tab title="Top Commands" %}
+Well, let's start by downloading the code.
+Go to the folder `config` then the file `bot.js`.
+For the bot to be able to start, please complete the file with your credentials as follows :
 
+- For emojis
 
-{% page-ref page="system-and-commands/play.md" %}
-{% endtab %}
-{% endtabs %}
+```js
+emojis: {
+    off: ':x:',
+    error: ':warning:',
+    queue: ':bar_chart:',
+    music: ':musical_note:',
+    success: ':white_check_mark:',
+}
+```
 
-* [x] 99.99% Uptimef
-* [x] Good music quality
+- For configuration
 
-{% hint style="info" %}
-Fly Music is not affilated with Discord Inc.
-{% endhint %}
+```js
+discord: {
+    token: 'TOKEN',
+    prefix: 'PREFIX',
+    activity: 'ACTIVITY',
+}
+```
 
+- `token`, the token of the bot available on the [Discord Developers](https://discordapp.com/developers/applications) section.
+- `prefix`, the prefix that will be set to use the bot.
+- `activity`, the activity of the bot.
 
+In the console, type `npm install` to install all dependencies.
 
+- To start the bot :
+
+```
+#With Node
+node index.js
+npm start #Indicated in package.json
+
+#With pm2
+pm2 start index.js --name "MusicBot"
+```
+
+All you have to do is turn on your bot !
+
+### 🎵 Music commands
+
+```
+play <name/URL>, play music in a voice channel.
+search <name>, open a panel to choose a music and then play it.
+pause, pause the current music.
+resume, puts the current music back on.
+queue, see the next songs.
+clear-queue, remove music in the queue.
+shuffle, to mix the queue.
+nowplaying, see music in progress.
+loop, to enable or disable the repeat function.
+volume <1 - 100>, change the volume.
+skip, skip to next music.
+stop, stop all music.
+filter <filter>, add / remove filter.
+w-filters, see filters.
+```
+
+### 💡 General commands
+
+```
+ping, see the bot latency.
+help, see the list of available commands.
+debug, see number of voice connections.
+```
+
+### 🏓 Utilities (to change the code)
+
+Find all the functions available on the official code [right here](http://github.pingugames.de/).
+
+This is used with [discord.js](https://www.npmjs.com/package/discord.js) and [discord-player](https://www.npmjs.com/package/discord-player).
